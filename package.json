@@ -1,0 +1,50 @@
+{
+  "name": "promise-ax",
+  "version": "1.0.0",
+  "description": "Promise Ax (Promesa) es usado para computaciones asíncronas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --maxWorkers=50%",
+    "testCoverage": "jest --coverage --maxWorkers=50%",
+    "testOnlyChanged": "jest --listTests --onlyChanged --maxWorkers=50%",
+    "testSilent": "jest test/app.spec.js --silent --maxWorkers=50%",
+    "build": "npm run-script build",
+    "publish": "npm publish"
+  },
+  "author": "jose.mejia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josmejia2401/promise-ax"
+  },
+  "keywords": [
+    "Promise",
+    "all",
+    "allSettled",
+    "PromiseAx",
+    "asíncronas",
+    "async",
+    "async request"
+  ],
+  "bugs": {
+    "url": "https://github.com/josmejia2401/promise-ax/issues"
+  },
+  "homepage": "https://github.com/josmejia2401/promise-ax#readme",
+  "engines": {
+    "node": ">= 5.0.0"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/**/*.spec.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^27.2.3",
+    "promise-ax": "^1.0.0"
+  },
+  "dependencies": {}
+}
