@@ -2,14 +2,29 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
+/***/ "./app.js":
+/*!****************!*\
+  !*** ./app.js ***!
+  \****************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
-const { PromiseAx } = __webpack_require__(/*! ./src/main/iterative.promise */ "./src/main/iterative.promise.js");
+const { createPromise } = __webpack_require__(/*! ./src/index.js */ "./src/index.js");
+module.exports = {
+    createPromise: createPromise,
+};
+
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+const { PromiseAx } = __webpack_require__(/*! ./main/iterative.promise */ "./src/main/iterative.promise.js");
 const createPromise = () => {
     return new PromiseAx();
 }
@@ -192,7 +207,7 @@ exports.Utils = class Utils {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./app.js");
 /******/ 	
 /******/ })()
 ;

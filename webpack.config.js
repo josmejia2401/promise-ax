@@ -5,7 +5,7 @@ const distPath = "build";
 module.exports = {
     mode: isLocal ? "development" : "production",
     entry: {
-        app: ['./index.js'],
+        app: ['./app.js'],
     },
     devtool: "source-map",
     resolve: {

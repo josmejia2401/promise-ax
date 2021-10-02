@@ -1,15 +1,15 @@
 {
   "name": "promise-ax",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "Promise Ax (Promesa) es usado para computaciones asíncronas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.",
-  "main": "build/index.js",
+  "main": "build/app.js",
   "scripts": {
     "test": "jest --detectOpenHandles --maxWorkers=50%",
     "testCoverage": "jest --coverage --maxWorkers=50%",
     "testOnlyChanged": "jest --listTests --onlyChanged --maxWorkers=50%",
     "testSilent": "jest test/app.spec.js --silent --maxWorkers=50%",
     "build": "webpack --config=webpack.config.js",
-    "publish": "NPM_TOKEN=<token> npm publish --access public"
+    "publish": "npm publish --access public"
   },
   "author": "jose.mejia",
   "license": "MIT",
@@ -45,6 +45,7 @@
   "devDependencies": {
     "jest": "^27.2.3",
     "webpack": "^5.56.0",
-    "webpack-cli": "^4.8.0"
+    "webpack-cli": "^4.8.0",
+    "promise-ax": "2.0.0"
   }
 }

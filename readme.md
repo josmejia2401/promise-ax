@@ -1,11 +1,13 @@
-# Promise Ax
-Promise Ax (Promesa) es usado para computaciones asíncronas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
+# Promise Ax o promise-ax
+Promise Ax or promise-ax (Promesa) es usado para computaciones asíncronas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
 
 100% compatible con Promise por defecto del sistema.
 
 _Siempre gratis, siempre libre_
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
+### Versión actual
+2.0.2
 
 ## Funciones
 - All
