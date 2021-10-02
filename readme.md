@@ -29,7 +29,7 @@ npm install --save-dev promise-ax
 
 ## Ejemplo
 ```js
-const { PromiseAx } = require('promise-ax');
+const { createPromise } = require('promise-ax');
 const promiseAx = createPromise();
 const promise1 = Promise.resolve(4);
 const promise2 = new Promise((resolve, reject) => setTimeout(reject, 100, new Error("error")));
