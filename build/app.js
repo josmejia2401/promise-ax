@@ -11,7 +11,7 @@
 
 const { createPromise } = __webpack_require__(/*! ./src/index.js */ "./src/index.js");
 module.exports = {
-    createPromise: createPromise,
+    createPromise: createPromise
 };
 
 
@@ -29,7 +29,7 @@ const createPromise = () => {
     return new PromiseAx();
 }
 module.exports = {
-    createPromise: createPromise,
+    createPromise: createPromise
 };
 
 

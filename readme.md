@@ -7,7 +7,7 @@ _Siempre gratis, siempre libre_
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ### Versión actual
-2.0.3
+2.0.4
 
 ## Funciones
 - All
@@ -59,7 +59,11 @@ promiseAx.allSettled(promisesToMake).then((results) => results.forEach((result) 
 // 100
 ```
 ## Pruebas
-Ejecutar npm test --maxWorkers=4
+Ejecutar el comando:
+
+```sh
+npm test --maxWorkers=4
+```
 
 ## License
 MIT

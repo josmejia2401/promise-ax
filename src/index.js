@@ -4,5 +4,5 @@ const createPromise = () => {
     return new PromiseAx();
 }
 module.exports = {
-    createPromise: createPromise,
+    createPromise: createPromise
 };
