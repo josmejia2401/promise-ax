@@ -62,4 +62,8 @@ Ejecutar npm test --maxWorkers=4
 ## License
 MIT
 
+## Otros
+- Repositorio en Git: https://github.com/josmejia2401/promise-ax
+- Repositorio en Npm: https://www.npmjs.com/package/promise-ax
+
 **Siempre gratis, siempre libre**
