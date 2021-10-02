@@ -14,37 +14,52 @@ _Siempre gratis, siempre libre_
 - reject
 - resolve
 
-## Características
-
+## Nuevas Características
+- Se agrega la función createPromise, la permite crear una nueva promesa (Promise), y la cual define las funciones declaradas en la sección de funciones.
+- Esta bibliotecta es totalmente compatible con Promise del sistema, funciones y peticiones asíncronas, entre otras.
 - La función allSettled devuelve una promesa que se resuelve después de que todas las promesas dadas se hayan cumplido o rechazado, con una serie de objetos que describen el resultado de cada promesa.
-- Se siguen rehusando las funciones de Promise.
+- La actual versión (2.0.0) no es compatible con versiones anteriores.
 
-## Installation
+## Instalación
 Se requiere tener instalado [Node.js](https://nodejs.org/) v7+ para ejecutar.
 
 ```sh
 npm install --save-dev promise-ax
 ```
 
-## Example
+## Ejemplo
 ```js
-const promise1 = PromiseAx.resolve(4);
+const { PromiseAx } = require('promise-ax');
+const promiseAx = createPromise();
+const promise1 = Promise.resolve(4);
 const promise2 = new Promise((resolve, reject) => setTimeout(reject, 100, new Error("error")));
-const promises = [promise1, promise2];
-
-PromiseAx.allSettled(promises).then((results) => results.forEach((result) => console.log(result.status)));
-
-// expected output:
-// "fulfilled"
-// "rejected"
+const promise3 = Promise.reject("error");
+const promise4 = promiseAx.resolve(8);
+const promise5 = promiseAx.reject("errorAx");
+const asyncOperation = (time) => {
+    return new Promise((resolve, reject) => {
+        if (time < 0) {
+            reject("reject");
+        }
+        setTimeout(() => {
+            resolve(time);
+        }, time);
+    });
+};
+const promisesToMake = [promise1, promise2, promise3, promise4, promise5, asyncOperation(100)];
+promiseAx.allSettled(promisesToMake).then((results) => results.forEach((result) => console.log(result)))
+// Salida esperada:
+// 4
+// Error: error
+// error
+// 8
+// errorAx
+// 100
 ```
 ## Pruebas
-
 Ejecutar npm test --maxWorkers=4
 
 ## License
 MIT
 
 **Siempre gratis, siempre libre**
-
-Construido en https://dillinger.io/
