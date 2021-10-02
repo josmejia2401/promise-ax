@@ -7,7 +7,7 @@ _Siempre gratis, siempre libre_
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ### Versión actual
-2.0.2
+2.0.3
 
 ## Funciones
 - All

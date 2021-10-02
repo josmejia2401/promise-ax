@@ -1,6 +1,6 @@
 {
   "name": "promise-ax",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Promise Ax (Promesa) es usado para computaciones asíncronas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.",
   "main": "build/app.js",
   "scripts": {
@@ -45,7 +45,6 @@
   "devDependencies": {
     "jest": "^27.2.3",
     "webpack": "^5.56.0",
-    "webpack-cli": "^4.8.0",
-    "promise-ax": "2.0.0"
+    "webpack-cli": "^4.8.0"
   }
 }
