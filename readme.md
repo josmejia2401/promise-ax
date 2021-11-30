@@ -3,12 +3,6 @@ Promise Ax or promise-ax (Promesa) es usado para computaciones asíncronas. Una 
 
 100% compatible con [Promise](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-_Siempre gratis, siempre libre_
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
-### Versión actual
-2.0.50
-
 ## Funciones
 - _allSettledWithTimeOut_: A diferencia de _allSettled_, _allSettledWithTimeOut_ permite definir la promesa, tiempo de espera, y mensaje de error. Cada promesa o función asíncrona es ejecutada por separado y en paralelo con su tiempo de espera definido.
 
@@ -84,13 +78,11 @@ _Siempre gratis, siempre libre_
     ### Valor devuelto
     Una Promise que es resuelta con el valor dado, o con la promise pasada como valor, si el valor era un objeto promise.
 
-Para más, puede seguir la página oficial de [Promesas](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-
-## Nuevas Características
-- Se agrega la función createPromise, la permite crear una nueva promesa (Promise), y la cual define las funciones declaradas en la sección de funciones.
-- Esta bibliotecta es totalmente compatible con Promise del sistema, funciones y peticiones asíncronas, entre otras.
-- La función allSettled devuelve una promesa que se resuelve después de que todas las promesas dadas se hayan cumplido o rechazado, con una serie de objetos que describen el resultado de cada promesa.
-- La actual versión (2.0.0) no es compatible con versiones anteriores.
+## Nuevas Características y/o cambios
+- Se aumentan los casos de pruebas.
+- Se agregan palabras claves para los filtros de búsquedas.
+- Se eliminan dependencias innecesarias.
+- Compatibilidad con EXPO para React.
 
 ## Instalación
 Se requiere tener instalado [Node.js](https://nodejs.org/) v7+ para ejecutar.
@@ -132,9 +124,6 @@ promiseAx.allSettled(promisesToMake).then((results) => results.forEach((result) 
 
 ```js
 // Ejemplo #2: Ejecutar promesas en paralelos con tiempo de espera con mensaje de error.
-/*
-
-*/
 const { createPromise } = require('promise-ax');
 const promiseAx = createPromise();
 const asyncOperation = (time) => {
@@ -156,9 +145,6 @@ promiseAx.allSettledWithTimeOut(promisesToMake, 1500, "Tiempo de espera vencido"
 
 ```js
 // Ejemplo #3: Ejecutar promesas en paralelos con tiempo de espera sin mensaje de error.
-/*
-
-*/
 const { createPromise } = require('promise-ax');
 const promiseAx = createPromise();
 const asyncOperation = (time) => {
@@ -190,6 +176,6 @@ MIT
 
 ## Otros
 - Repositorio en Git: https://github.com/josmejia2401/promise-ax
-- Repositorio en Npm: https://www.npmjs.com/package/promise-ax
+- Repositorio en Npm: https://www.npmjs.com/~josmejia.2401
 
-**Siempre gratis, siempre libre**
+**_Siempre gratis, siempre libre_**
