@@ -4,7 +4,7 @@ class PromiseAx {
     /**
      * Lo que primero se cumpla, es lo que se devuelve.
      */
-    #promiseWithTimeOut(promise, time, messageTimeOut) {
+    promiseWithTimeOut(promise, time, messageTimeOut) {
         let timer;
         let error = messageTimeOut ? new Error(messageTimeOut) : new Error("Request timed out");
         return Promise.race([
@@ -34,7 +34,7 @@ class PromiseAx {
                 const indexCurrent = index;
                 try {
                     let value = iterable[index];
-                    this.#promiseWithTimeOut(value, timeout, messageTimeOut).then((result) => {
+                    this.promiseWithTimeOut(value, timeout, messageTimeOut).then((result) => {
                         completed++;
                         results[indexCurrent] = result;
                         if (completed == iterable.length) {
@@ -107,4 +107,6 @@ class PromiseAx {
         return Promise.resolve(value);
     }
 }
-exports.PromiseAx = PromiseAx;
+module.exports = {
+    PromiseAx
+};
